@@ -1,0 +1,35 @@
+.body {
+    background-color: #050269;
+}
+
+.header {
+    background-color: #0EA2E0;
+    padding: 1vh;
+}
+
+.footer {
+    background-color: #0EA2E0;
+    padding: 1vh;
+}
+
+.main-article {
+    background-color: #4FB5FF;
+    padding: 1vh;
+    margin: 1vh;
+}
+/* article {
+    background-color: #4FB5FF;
+    padding: 1vh;  #759BFF
+} */
+
+.header-navigation__unordered-list {
+    list-style-type: none;
+}
+
+.header-navigation__unordered-list li {
+    padding-left: 2rem;
+    background-image: url("/basketball.svg");
+    background-position: 0 0;
+    background-size: 1.0rem 1.0rem;
+    background-repeat: no-repeat;
+}

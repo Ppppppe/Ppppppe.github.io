@@ -2,19 +2,20 @@
 <html lang="ru">
     <head>
         <title>Авторский сайт о баскетболе</title>
+        <link rel="stylesheet" href="CSS/style.css">
         <meta charset="utf-8">
         <meta name="keywords" content="баскетбол, basketball, NBA, EuroLeague">
     </head>
 
-    <body>
+    <body class="body">
 
-        <header>
+        <header class = "header">
             <h2>
                 Авторский сайт о баскетболе 
             </h2>
-            <nav>
+            <nav class = "header-navigation">
                 <h3>Навигация по сайту</h3>
-                <ul>
+                <ul class = "header-navigation__unordered-list">
                     <li>Краткая информация о ресурсе</li>
                     <li>Топ-5 NBA прошедшего сезона по очкам</li>
                     <li>Фавориты на грядущий сезон</li>
@@ -23,13 +24,16 @@
             </nav>
         </header>
 
-        <main>
-            <article>
+        <main class = "main">
+            <article class = "main-article">
                 <h3>Краткая информация о сайте</h3>
                 <p>
-                    Ресурс представляет собой набор случайных фактов, новостей и полезных ссылок о североамериканском баскетболе.
+                    Ресурс представляет собой набор случайных фактов, новостей и полезных ссылок о североамериканском и европейском баскетболе.
                     <br>
                     С течением времени содержание и наполнение будет расти. Следите за новостями!
+                </p>
+                <p>
+                    <img id = "img1">
                 </p>
                 <blockquote>
                     <p>
@@ -38,7 +42,7 @@
                     <cite>Майкл Джордан</cite>
                 </blockquote>
                 <pre>
-                            ..ee$$$$$ee..
+                        ..ee$$$$$ee..
                     .e$*""    $    ""*$e.
                   z$"*.       $         $$c
                 z$"   *.      $       .P  ^$c
@@ -58,7 +62,7 @@
                      "*$ee..  $  ..ze$P"
                 </pre>
             </article>
-            <article>
+            <article class = "main-article">
                 <h3>Топ-5 бомбардиров NBA в прошедшем сезоне</h3>
                 <ol>
                     <li>Джоэл Эмбиид - Филадельфия - 30.6</li>
@@ -70,7 +74,7 @@
                 <p><strong>Обратите внимание:</strong> показатель формирования рейтинга - <ins>количество очков за игру</ins></p>
                 <p>Формула расчета показателя:</p><p> ∑ Очков <sub>за сезон</sub><br>---------<br>∑ Игр <sub>за сезон</sub></p>
             </article>
-            <article>
+            <article class = "main-article">
                 <h3>Фавориты на сезон 2022/2023</h3>
                 <section>
                     <h4>"Голден Стэйт"</h4>
@@ -95,7 +99,7 @@
                     </p>
                 </section>
             </article>
-            <article>
+            <article class = "main-article">
                 <h4>NBA Data API: Репозиторий для работы со статистикой, пример</h4>
                 <p>
                     Вот полезный репозиторий для работы со статистическими данными баскетбольной ассоциации на Python 3.7+
@@ -122,8 +126,11 @@
             </article> 
         </main>
 
-        <footer>
+        <footer class = "footer">
             <p>© Пестеров Д. С., 2022<br>тел. 8-999-1234567</p>
         </footer>
     </body>
+
+    <script src="/JS/script.js"></script>
+
 </html>
