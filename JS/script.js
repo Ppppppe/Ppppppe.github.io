@@ -1,6 +1,6 @@
-let value = 'michael-jordan.jpg'
-const img1 = document.querySelector('#img1')
-img1.setAttribute('src', value);
+// let value = 'michael-jordan.jpg'
+// const img1 = document.querySelector('#img1')
+// img1.setAttribute('src', value);
 
 
 const data = null;
