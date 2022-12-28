@@ -28,7 +28,7 @@
 
 .header-navigation__unordered-list li {
     padding-left: 2rem;
-    background-image: url("/basketball.svg");
+    background-image: url("../basketball.svg");
     background-position: 0 0;
     background-size: 1.0rem 1.0rem;
     background-repeat: no-repeat;
