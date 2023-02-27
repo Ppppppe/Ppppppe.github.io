@@ -1,35 +1,149 @@
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 2vh;
+    line-height: 1.5;
+}
+
+li, p {
+    line-height: 1.5;
+}
+
 .body {
     background-color: #050269;
 }
 
-.header {
+.welcome-header {
     background-color: #0EA2E0;
-    padding: 1vh;
+    padding: 1rem;
+}
+
+.welcome-header__title {
+    text-align: center;
 }
 
 .footer {
     background-color: #0EA2E0;
-    padding: 1vh;
+    padding: 1rem;
 }
 
 .main-article {
     background-color: #4FB5FF;
-    padding: 1vh;
-    margin: 1vh;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.main-article__title {
+    text-align: center;
 }
 /* article {
     background-color: #4FB5FF;
     padding: 1vh;  #759BFF
 } */
 
-.header-navigation__unordered-list {
+.ball-navigation {
     list-style-type: none;
+    font-weight: bold;
 }
 
-.header-navigation__unordered-list li {
+.ball-navigation__item {
+    list-style-type: none;
     padding-left: 2rem;
     background-image: url("../basketball.svg");
     background-position: 0 0;
-    background-size: 1.0rem 1.0rem;
+    background-size: 1.5rem 1.5rem;
     background-repeat: no-repeat;
+    line-height: 2.0;
+}
+
+.top-list {
+    /* border: 2px solid red; */
+    background-image: url("../first-place.svg");
+    background-position: 0.4rem 0.0rem;
+    background-size: 1.5rem 1.5rem;
+    background-repeat: no-repeat;
+    text-transform: capitalize;
+    /* padding-left: 1rem; */
+}
+
+.top-list__first-place {
+    list-style-type: none;
+}
+
+.sports-team-name {
+    text-shadow: 1px 1px 1px #000;
+    font-weight: bold;
+    letter-spacing: 0.15rem;
+    word-spacing: 0.5rem;
+    text-decoration-line: underline;
+    text-decoration-style: double;
+}
+
+.boston {
+    padding-left: 2rem;
+    color: rgb(40, 183, 12);
+    background-image: url("../boston-logo.svg");
+    background-position: 0 0;
+    background-size: 1.5rem 1.5rem;
+    background-repeat: no-repeat;
+}
+
+.golden-state {
+    line-height: 3;
+    padding-left: 3rem;
+    color: rgb(215, 212, 21);
+    background-image: url("../gsw-logo.svg");
+    background-position: 0 0;
+    background-size: 3rem 3rem;
+    background-repeat: no-repeat;
+    /* background: linear-gradient(#091bdd, #eff305); */
+    /* border: 2px solid red; */
+}
+
+.ascii-img {
+    line-height: 0.75;
+    letter-spacing: -7px;
+    font-size: 3vh;
+    width: 75vh;
+	overflow: auto;
+	overflow-y: hidden;
+	/* background-color: #0EA2E0; */
+    background: 
+        linear-gradient(217deg, rgba(255, 162, 0, 0.8), rgba(255,0,0,0) 70.71%), 
+        linear-gradient(127deg, rgba(13, 228, 210, 0.8), rgba(0,255,0,0) 70.71%), 
+        linear-gradient(336deg, rgba(0, 0, 255, 0.763), rgba(0,0,255,0) 70.71%);
+    /* background-image: url(../grad-bg.jpg);
+    background-size: cover; */
+    text-shadow: 1px 1px 1px #000;
+    color:rgb(234, 103, 10);
+	border: 0.15rem solid #777;
+}
+
+pre {
+    background-color: #e6daa6;
+}
+
+code {
+    width: 100%;
+	padding: 10px;
+	color: #333;
+}
+
+strong {
+    text-transform: uppercase;
+}
+
+ins {
+    background-color: rgb(62, 196, 62);
+    padding: 0 0.5rem 0;
+}
+
+del {
+    background-color: rgb(196, 62, 62);
+    padding: 0 0.5rem 0;
+}
+
+blockquote {
+    padding-left: 15px;
+    border-left: 3px solid #787878;
+    font-size: 1rem;
 }
