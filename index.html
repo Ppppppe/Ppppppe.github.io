@@ -43,24 +43,24 @@
                 </blockquote>
                 <pre class = "ascii-img">
                     
-                        ..ee$$$$$ee..
-                    .e$*""    $    ""*$e.
-                  z$"*.       $         $$c
-                z$"   *.      $       .P  ^$c
-               d"      *      $      z"     "b
-              $"        b     $     4%       ^$
-             d%         *     $     P         '$
-            .$          'F    $    J"          $r
-            4L...........b....$....$...........J$
-            $F           F    $    $           4$
-            4F          4F    $    4r          4P
-            ^$          $     $     b          $%
-             3L        .F     $     'r        JP
-              *c       $      $      3.      z$
-               *b     J"      $       3r    dP
-                ^$c  z%       $        "c z$"
-                  "*$L        $        .d$"
-                     "*$ee..  $  ..ze$P"
+            ..ee$$$$$ee..            
+        .e$*""    $    ""*$e.        
+      z$"*.       $         $$c      
+    z$"   *.      $       .P  ^$c    
+   d"      *      $      z"     "b   
+  $"        b     $     4%       ^$  
+ d%         *     $     P         '$ 
+.$          'F    $    J"          $r
+4L...........b....$....$...........J$
+$F           F    $    $           4$
+4F          4F    $    4r          4P
+^$          $     $     b          $%
+ 3L        .F     $     'r        JP 
+  *c       $      $      3.      z$  
+   *b     J"      $       3r    dP   
+    ^$c  z%       $        "c z$"    
+      "*$L        $        .d$"      
+         "*$ee..  $  ..ze$P"         
                 </pre>
             </article>
             <article class = "main-article">
@@ -109,19 +109,19 @@
                 <p>
                     Хороший пример по работе с API: 
                     <pre><code>
-                        from nba_api.stats.endpoints import playercareerstats
+    from nba_api.stats.endpoints import playercareerstats
 
-                        # Giannis Antetokounmpo
-                        career = playercareerstats.PlayerCareerStats(player_id='203507') 
+    # Giannis Antetokounmpo
+    career = playercareerstats.PlayerCareerStats(player_id='203507') 
 
-                        # pandas data frames (optional: pip install pandas)
-                        career.get_data_frames()[0]
+    # pandas data frames (optional: pip install pandas)
+    career.get_data_frames()[0]
 
-                        # json
-                        career.get_json()
+    # json
+    career.get_json()
 
-                        # dictionary
-                        career.get_dict()
+    # dictionary
+    career.get_dict()
                     </code></pre>
                 </p>
             </article> 
