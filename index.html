@@ -2,6 +2,7 @@
 <html lang="ru">
     <head>
         <title>Авторский сайт о баскетболе</title>
+        <!-- <link rel="stylesheet" href="CSS/reset.css"> -->
         <link rel="stylesheet" href="CSS/style.css">
         <meta charset="utf-8">
         <meta name="keywords" content="баскетбол, basketball, NBA, EuroLeague">
@@ -72,7 +73,7 @@ $F           F    $    $           4$
                     <li>Кевин Дюрэнт - Бруклин - 29.9</li>
                     <li>трэй Янг - атланта - 28.4</li>
                 </ol>
-                <p><strong>Обратите внимание:</strong> показатель формирования рейтинга - <ins>количество очков за игру</ins></p>
+                <p><strong>Обратите внимание:</strong> показатель формирования рейтинга - <i>количество очков за игру</i></p>
                 <p>Формула расчета показателя:</p><p> ∑ Очков <sub>за сезон</sub><br>---------<br>∑ Игр <sub>за сезон</sub></p>
             </article>
             <article class = "main-article">
@@ -112,7 +113,8 @@ $F           F    $    $           4$
     from nba_api.stats.endpoints import playercareerstats
 
     # Giannis Antetokounmpo
-    career = playercareerstats.PlayerCareerStats(player_id='203507') 
+    career = playercareerstats
+        .PlayerCareerStats(player_id='203507') 
 
     # pandas data frames (optional: pip install pandas)
     career.get_data_frames()[0]
