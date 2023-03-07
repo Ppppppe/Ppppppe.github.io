@@ -113,6 +113,10 @@ li, p {
 	border: 0.15rem solid #777;
 }
 
+.footer {
+    border: medium solid #484747;
+}
+
 pre {
     background-color: #e6daa6;
     /* width: min-content; */
