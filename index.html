@@ -6,42 +6,49 @@
         <link rel="stylesheet" href="CSS/style.css">
         <meta charset="utf-8">
         <meta name="keywords" content="баскетбол, basketball, NBA, EuroLeague">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
     <body class="body">
-
+        <div id = "up-button"><a href="#top">Наверх</a></div>
         <header class = "welcome-header">
             <h2 class = "welcome-header__title">
+                <a name="top"></a>
                 Авторский сайт о баскетболе 
             </h2>
             <nav class = "header-navigation">
                 <h3>Навигация по сайту</h3>
                 <ul class = "ball-navigation">
-                    <li class = "ball-navigation__item">Краткая информация о ресурсе</li>
-                    <li class = "ball-navigation__item">Топ-5 NBA прошедшего сезона по очкам</li>
-                    <li class = "ball-navigation__item">Фавориты на грядущий сезон</li>
-                    <li class = "ball-navigation__item">NBA Data API</li>
+                    <li class = "ball-navigation__item"><a href="#summary">Краткая информация о ресурсе</a></li>
+                    <li class = "ball-navigation__item"><a href="#past-season">Топ-5 NBA прошедшего сезона по очкам</a></li>
+                    <li class = "ball-navigation__item"><a href="#season-favorites">Фавориты на грядущий сезон</a></li>
+                    <li class = "ball-navigation__item"><a href="#nba-data-api">NBA Data API</a></li>
                 </ul>
             </nav>
         </header>
 
         <main class = "main">
             <article class = "main-article">
-                <h3 class = "main-article__title">Краткая информация о сайте</h3>
+                <h3 class = "main-article__title"><a name="summary"></a>Краткая информация о сайте</h3>
                 <p>
                     Ресурс представляет собой набор случайных фактов, новостей и полезных ссылок о североамериканском и европейском баскетболе.
                     <br>
                     С течением времени содержание и наполнение будет расти. Следите за новостями!
                 </p>
-                <p>
-                    <img id = "img1" src = "michael-jordan.jpg">
-                </p>
+                <section class = "img-gallery">
+                    
+                    <img class = "img-gallery-item" src = "michael-jordan.jpg">
+                    <img class = "img-gallery-item" src = "michael-jordan.jpg">
+                    <img class = "img-gallery-item" src = "michael-jordan.jpg">
+                
+                </section>
                 <blockquote>
                     <p>
                         Я могу объяснить <em>всем</em>, как нужно играть в баскетбол. Вот только <em>никто</em> так не сможет
                     </p>
                     <cite>Майкл Джордан</cite>
                 </blockquote>
+                <section class = "img-gallery">
                 <pre class = "ascii-img">
                     
             ..ee$$$$$ee..            
@@ -63,9 +70,10 @@ $F           F    $    $           4$
       "*$L        $        .d$"      
          "*$ee..  $  ..ze$P"         
                 </pre>
+                </section>
             </article>
             <article class = "main-article">
-                <h3 class = "main-article__title">Топ-5 бомбардиров NBA в прошедшем сезоне</h3>
+                <h3 class = "main-article__title"><a name="past-season"></a>Топ-5 бомбардиров NBA в прошедшем сезоне</h3>
                 <ol class = "top-list">
                     <li class = "top-list__first-place">джоэл эмбиид - филадельфия - 30.6</li>
                     <li id = "asd">леброн джеймс - лейкерс - 30.3</li>
@@ -74,10 +82,23 @@ $F           F    $    $           4$
                     <li>трэй Янг - атланта - 28.4</li>
                 </ol>
                 <p><strong>Обратите внимание:</strong> показатель формирования рейтинга - <i>количество очков за игру</i></p>
-                <p>Формула расчета показателя:</p><p> ∑ Очков <sub>за сезон</sub><br>---------<br>∑ Игр <sub>за сезон</sub></p>
+                <p>Формула расчета показателя:
+                <math>
+                    <mfrac>
+                      <mrow>
+                        <mo movablelimits="false">∑</mo>
+                        <mtext> очков за сезон</mtext>
+                      </mrow>
+                      <mrow>
+                        <mo movablelimits="false">∑</mo>
+                        <mtext> игр за сезон</mtext>
+                      </mrow>
+                    </mfrac>
+                </math>
+                </p>
             </article>
             <article class = "main-article">
-                <h3 class = "main-article__title">Фавориты на сезон 2022/2023</h3>
+                <h3 class = "main-article__title"><a name="season-favorites"></a>Фавориты на сезон 2022/2023</h3>
                 <section class = "main-article__section">
                     <h4 class = "sports-team-name golden-state">"Голден Стэйт"</h4>
                     <p>
@@ -102,7 +123,7 @@ $F           F    $    $           4$
                 </section>
             </article>
             <article class = "main-article">
-                <h4>NBA Data API: Репозиторий для работы со статистикой, пример</h4>
+                <h4><a name="nba-data-api"></a>NBA Data API: Репозиторий для работы со статистикой, пример</h4>
                 <p>
                     Вот полезный репозиторий для работы со статистическими данными баскетбольной ассоциации на Python 3.7+
                     <a href="https://github.com/swar/nba_api" target="_blank">Тык</a>

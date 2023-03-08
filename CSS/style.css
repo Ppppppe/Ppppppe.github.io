@@ -46,7 +46,7 @@ li, p {
     list-style-type: none;
     padding-left: 2rem;
     background-image: url("../basketball.svg");
-    background-position: 0 0;
+    background-position: 0.25rem 0.25rem;
     background-size: 1.5rem 1.5rem;
     background-repeat: no-repeat;
     line-height: 2.0;
@@ -88,7 +88,7 @@ li, p {
 .golden-state {
     line-height: 3;
     padding-left: 3rem;
-    color: rgb(237, 229, 8);
+    color: rgb(225, 215, 0);
     background-image: url("../gsw-logo.svg");
     background-position: 0 0;
     background-size: 3rem 3rem;
@@ -157,4 +157,64 @@ em {
 i {
     font-style: oblique;
     color:rgba(7, 7, 46, 0.763);
+}
+
+/* позиционирование элементов */
+
+.body {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-article {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-gallery {
+    display: flex;
+    justify-content: space-around;
+    /* border:2px solid red; */
+}
+
+.img-gallery-item {
+    width: 30%;
+}
+
+.ball-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    /* border: 2px solid red; */
+}
+
+@media screen and (max-width: 1000px){
+    .ball-navigation {
+        flex-direction: column;
+    }
+}
+
+.ball-navigation__item {
+    /* border: 2px solid red; */
+}
+
+#up-button {
+    width: 70px;
+    height: 30px;
+    background-color: aqua;
+    border: 2px double antiquewhite;
+
+    position: fixed;
+    top: 20px;
+    left: 50px;
+    z-index: 1;
+}
+
+math {
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+.welcome-header {
+    z-index: 2;
 }
