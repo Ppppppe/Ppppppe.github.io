@@ -179,6 +179,7 @@ i {
 
 .img-gallery-item {
     width: 30%;
+    object-fit: cover;
 }
 
 .ball-navigation {
