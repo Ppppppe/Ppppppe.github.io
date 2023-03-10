@@ -15,7 +15,7 @@ li, p {
 
 .welcome-header {
     background-color: #0EA2E0;
-    padding: 1rem;
+    padding: 1em;
 }
 
 .welcome-header__title {
@@ -24,7 +24,7 @@ li, p {
 
 .footer {
     background-color: #0EA2E0;
-    padding: 1rem;
+    padding: 1em;
 }
 
 .main-article {
@@ -44,23 +44,23 @@ li, p {
 
 .ball-navigation__item {
     list-style-type: none;
-    padding-left: 2rem;
-    background-image: url("../basketball.svg");
-    background-position: 0.25rem 0.25rem;
-    background-size: 1.5rem 1.5rem;
+    padding-left: 2em;
+    background-image: url("../img/basketball.svg");
+    background-position: 0.25em 0.25em;
+    background-size: 1.5em 1.5em;
     background-repeat: no-repeat;
     line-height: 2.0;
 }
 
 .top-list {
     /* border: 2px solid red; */
-    background-image: url("../first-place.svg");
+    background-image: url("../img/first-place.svg");
     background-position: 1.4em 0em;
-    background-size: 1.5rem 1.5rem;
+    background-size: 1.5em 1.5em;
     background-repeat: no-repeat;
     text-transform: capitalize;
     text-align: left;
-    padding-left: 3rem;
+    padding-left: 3em;
 }
 
 .top-list__first-place {
@@ -71,26 +71,26 @@ li, p {
     text-shadow: 1px 1px 1px #000000;
     color: #923f21;
     font-weight: bold;
-    letter-spacing: 0.15rem;
-    word-spacing: 0.5rem;
+    letter-spacing: 0.15em;
+    word-spacing: 0.5em;
     line-height: 2em;
     text-decoration-line: underline;
     text-decoration-style: double;
 }
 
 .boston {
-    padding-left: 2rem;
+    padding-left: 2em;
     color: rgb(27, 139, 4);
-    background-image: url("../boston-logo.svg");
+    background-image: url("../img/boston-logo.svg");
     background-position: 0.1em 0.1em;
     background-size: 1.7em 1.7em;
     background-repeat: no-repeat;
 }
 
 .milwaukee {
-    padding-left: 2rem;
+    padding-left: 2em;
     color: rgb(3, 87, 35);
-    background-image: url("../bucks-logo.svg");
+    background-image: url("../img/bucks-logo.svg");
     background-position: 0 0;
     background-size: 1.7em 1.7em;
     background-repeat: no-repeat;
@@ -98,9 +98,9 @@ li, p {
 
 .golden-state {
     line-height: 3;
-    padding-left: 3rem;
+    padding-left: 3em;
     color: rgb(225, 215, 0);
-    background-image: url("../gsw-logo.svg");
+    background-image: url("../img/gsw-logo.svg");
     background-position: 0 0;
     background-size: 3em 3em;
     background-repeat: no-repeat;
@@ -121,7 +121,7 @@ li, p {
         linear-gradient(336deg, rgba(0, 0, 255, 0.763), rgba(0,0,255,0) 70.71%);
     text-shadow: 1px 1px 1px #000;
     color:rgb(234, 103, 10);
-	border: 0.15rem solid #777;
+	border: 0.15em solid #777;
 }
 
 .footer {
@@ -147,18 +147,18 @@ strong b {
 
 ins {
     background-color: rgb(62, 196, 62);
-    padding: 0 0.5rem 0;
+    padding: 0 0.5em 0;
 }
 
 del {
     background-color: rgb(196, 62, 62);
-    padding: 0 0.5rem 0;
+    padding: 0 0.5em 0;
 }
 
 blockquote {
     padding-left: 15px;
     border-left: 3px solid #787878;
-    font-size: 1rem;
+    font-size: 1em;
 }
 
 em {
@@ -290,4 +290,15 @@ math {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.advertising-banner {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 1400px) {
+    .advertising-banner {
+        display: none;
+    }
 }
