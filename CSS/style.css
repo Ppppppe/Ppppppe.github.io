@@ -302,3 +302,24 @@ math {
         display: none;
     }
 }
+
+.main-article__stat-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items:start;
+}
+
+.main-article__stat-section__column {
+    flex-direction: column;
+}
+
+.main-article__stat-section-item {
+    margin-right: 10%;
+}
+
+.main-article__stat-section-item-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
