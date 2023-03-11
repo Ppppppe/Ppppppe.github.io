@@ -2,12 +2,90 @@
 <html lang="ru">
     <head>
         <title>Авторский сайт о баскетболе</title>
-        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="/CSS/style.css">
         <meta charset="utf-8">
         <meta name="keywords" content="баскетбол, basketball, NBA, EuroLeague">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="/JS/on-every-page.js"></script>
     </head>
 
     <body class="body">
+        <div id = "up-button"><a href="#top">Наверх</a></div>
+        <header class = "welcome-header">
+            <h2 class = "welcome-header__title">
+                <a name="top"></a>
+                Авторский сайт о баскетболе 
+            </h2>
+            <nav class = "header-navigation">
+                <h3>Навигация по сайту</h3>
+
+                <ul class = "rim-navigation">
+                    <li>
+                        <a href="/" class = "rim-navigation-item" id = "main-page">Главная страница</a>
+                        <ul class = "ball-navigation">
+                            <li class = "ball-navigation-item"><a href="/#summary">Краткая информация о ресурсе</a></li>
+                            <li class = "ball-navigation-item"><a href="/#past-season">Топ-5 NBA прошедшего сезона по очкам</a></li>
+                            <li class = "ball-navigation-item"><a href="/#league-table">Турнирная таблица</a></li>
+                            <li class = "ball-navigation-item"><a href="/#season-favorites">Фавориты на грядущий сезон</a></li>
+                            <li class = "ball-navigation-item"><a href="/#nba-data-api">NBA Data API</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/HTML/history.html" class = "rim-navigation-item" id = "history-page">История</a>
+                        <ul class = "ball-navigation">
+                            <li class = "ball-navigation-item"><a href="/HTML/history.html#origin">Появление</a></li>
+                            <li class = "ball-navigation-item"><a href="/HTML/history.html#development">Развитие</a></li>
+                            <li class = "ball-navigation-item"><a href="/HTML/history.html#professional">Профессиональный баскетбол</a></li>
+                            <li class = "ball-navigation-item"><a href="/HTML/history.html#international">Международный баскетбол</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+        </header>
+        <main class = "main">
+            <article class = "main-article">
+                <h3 class = "main-article__title"><a name="origin"></a>Появление</h3>
+                <p>
+                    Зимой 1891 года студентам колледжа Молодёжной христианской ассоциации из Спрингфилда, штат Массачусетс, вынужденным выполнять 
+                    гимнастические упражнения, считавшиеся в то время единственным средством приобщения молодёжи к спорту, было очень скучно 
+                    на занятиях физического воспитания. Однообразию таких занятий необходимо было положить конец.
+                </p>
+                <p>
+                    Выход из этого положения нашёл преподаватель колледжа Джеймс Нейсмит. 21 декабря 1891 года он привязал две корзины 
+                    из-под персиков к перилам балкона спортивного зала и, разделив восемнадцать студентов на две команды, предложил им игру, 
+                    смысл которой сводился к тому, чтобы забросить большее количество мячей в корзину соперников.
+                </p>
+                <p>
+                    <img src = "/img/old-ball.png" class = "history-article-img"> 
+                    Идея этой игры у него зародилась ещё в школьные годы, когда дети играли в старинную игру «duck-on-a-rock» («Утка на скале»). 
+                    Смысл этой популярной в то время игры заключался в следующем: подбрасывая небольшой камень, необходимо было поразить им вершину 
+                    другого камня, большего по размеру.<br>
+                    Игра, получившая название «баскетбол», лишь отдалённо напоминала современный вид спорта. Ведения мяча не существовало, 
+                    игроки только перебрасывали его друг другу, стоя на месте, и стремились затем закинуть в корзину, причём исключительно 
+                    обеими руками снизу или от груди, а после удачного броска один из игроков забирался на приставленную к стене лестницу и 
+                    извлекал мяч из корзины. Целью доктора Нейсмита было создать игру именно коллективную, в которую можно было бы вовлечь 
+                    одновременно большое количество участвующих, и этой задаче его изобретение отвечало в полной мере.<br>
+                    В 1892 году преподавателем физкультуры Смит-колледжа в Нортгемптоне (Массачусетс) Сендой Беренсон были разработаны первые 
+                    правила женского баскетбола.
+                </p>
+            </article>
+            <article class = "main-article">
+                <h3 class = "main-article__title"><a name="development"></a>Развитие</h3>
+            </article>
+            <article class = "main-article">
+                <h3 class = "main-article__title"><a name="professional"></a>Профессиональный баскетбол</h3>
+            </article>
+            <article class = "main-article">
+                <h3 class = "main-article__title"><a name="international"></a>Международный баскетбол</h3>
+            </article>
+        </main>
+        <footer class = "footer">
+            <section class = "advertising-banner">
+                <img  src = "/img/adv.png">
+            </section>
+            <p>© Пестеров Д. С., 2022<br>тел. 8-999-1234567</p>
+            <p id = "loadtime"></p>
+        </footer>
     </body>
 </html>

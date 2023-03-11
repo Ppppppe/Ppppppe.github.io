@@ -7,6 +7,8 @@
         <meta charset="utf-8">
         <meta name="keywords" content="баскетбол, basketball, NBA, EuroLeague">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="JS/script.js"></script>
+        <script src="JS/on-every-page.js"></script>
     </head>
 
     <body class="body">
@@ -21,22 +23,22 @@
 
                 <ul class = "rim-navigation">
                     <li>
-                        <a href="#summary" class = "rim-navigation-item">Главная страница</a>
+                        <a href="/" class = "rim-navigation-item" id = "main-page">Главная страница</a>
                         <ul class = "ball-navigation">
                             <li class = "ball-navigation-item"><a href="/#summary">Краткая информация о ресурсе</a></li>
                             <li class = "ball-navigation-item"><a href="/#past-season">Топ-5 NBA прошедшего сезона по очкам</a></li>
-                            <li class = "ball-navigation-item"><a href="#league-table">Турнирная таблица</a></li>
-                            <li class = "ball-navigation-item"><a href="#season-favorites">Фавориты на грядущий сезон</a></li>
-                            <li class = "ball-navigation-item"><a href="#nba-data-api">NBA Data API</a></li>
+                            <li class = "ball-navigation-item"><a href="/#league-table">Турнирная таблица</a></li>
+                            <li class = "ball-navigation-item"><a href="/#season-favorites">Фавориты на грядущий сезон</a></li>
+                            <li class = "ball-navigation-item"><a href="/#nba-data-api">NBA Data API</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="HTML/history.html" class = "rim-navigation-item">История</a>
+                        <a href="/HTML/history.html" class = "rim-navigation-item" id = "history-page">История</a>
                         <ul class = "ball-navigation">
-                            <li class = "ball-navigation-item"><a href="#summary">Появление</a></li>
-                            <li class = "ball-navigation-item"><a href="#summary">Развитие</a></li>
-                            <li class = "ball-navigation-item"><a href="#summary">Профессиональный баскетбол</a></li>
-                            <li class = "ball-navigation-item"><a href="#summary">Международный баскетбол</a></li>
+                            <li class = "ball-navigation-item"><a href="/HTML/history.html#origin">Появление</a></li>
+                            <li class = "ball-navigation-item"><a href="/HTML/history.html#development">Развитие</a></li>
+                            <li class = "ball-navigation-item"><a href="/HTML/history.html#professional">Профессиональный баскетбол</a></li>
+                            <li class = "ball-navigation-item"><a href="/HTML/history.html#international">Международный баскетбол</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -217,9 +219,7 @@ $F           F    $    $           4$
                 <img  src = "img/adv.png">
             </section>
             <p>© Пестеров Д. С., 2022<br>тел. 8-999-1234567</p>
+            <p id = "loadtime"></p>
         </footer>
     </body>
-
-    <script src="JS/script.js"></script>
-
 </html>
