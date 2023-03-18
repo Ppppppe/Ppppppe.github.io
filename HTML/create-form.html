@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+    <head>
+        <title>Авторский сайт о баскетболе</title>
+        <link rel="stylesheet" href="/CSS/style.css">
+        <meta charset="utf-8">
+        <meta name="keywords" content="баскетбол, basketball, NBA, EuroLeague">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="/JS/on-every-page.js"></script>
+        <!-- defer -->
+        <script src="/JS/form-generator.js"></script>
+    </head>
+
+    <body class="body">
+        <div id = "up-button"><a href="#top">Наверх</a></div>
+        <header class = "welcome-header">
+            <h2 class = "welcome-header__title">
+                <a name="top"></a>
+                Конструктор формы
+            </h2>
+            <nav class = "header-navigation">
+                <ul class = "rim-navigation">
+                    <li>
+                        <a href="/" class = "rim-navigation-item" id = "main-page">Главная страница</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class = "main">
+            <article class = "main-article">
+                <h3 class = "main-article__title"><a name="origin"></a></h3>
+                <p>
+                    Здесь можно создать таблицу. Указывается длина и ширина (в ячейках)
+                </p>
+                <form onsubmit="generate_form(this); return false;">
+                    <p>
+                        <input type = "number" id = "number-of-games" value="" placeholder="Количество игр"><br>
+                        <input type = "date" id = "date-of-games" value="2023-02-02" min="2023-01-01" max="2023-03-21">
+                    <p>
+                    <input type="submit"></p>
+                </form>
+                <div id = "generated-form">
+            </article>
+        </main>
+        <footer class = "footer">
+            <section class = "advertising-banner">
+            </section>
+            <div style = "width: 96vw;"></div>
+            <p>© Пестеров Д. С., 2022<br>тел. 8-999-1234567</p>
+            <p id = "loadtime"></p>
+        </footer>
+    </body>
+</html>
