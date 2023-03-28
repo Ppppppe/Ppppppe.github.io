@@ -15,11 +15,18 @@ li, p {
 
 .welcome-header {
     background-color: #0EA2E0;
-    padding: 1em;
+    padding: 0em 1em 0em;
 }
 
 .welcome-header__title {
+    font-size: 5vh;
+    letter-spacing: 0em;
     text-align: center;
+    color: #04081d;
+    text-shadow: 1px 1px 1px #ffffff,
+                -10px 10px 0px #3f54bc,
+                -20px 20px 0px #4f92ff;
+
 }
 
 .footer {
@@ -90,6 +97,11 @@ li, p {
     background-color: aquamarine;
     border-color: blue;
     transition-duration: 0.4s;
+}
+
+.rim-navigation-item_active {
+    border-color: #6d17af;
+    background-color: #b396c7;
 }
 
 .top-list {
@@ -378,3 +390,4 @@ math {
     transition-duration: 0.7s;
     transform: rotate(360deg);
 }
+

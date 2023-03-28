@@ -1,24 +1,30 @@
 var before_loadtime = new Date().getTime();
 
-window.onload = Pageloadtime;
+function OnLoadFuncs() {
+    pageLoadTime();
+    lightsUpNavigation();
+}
 
-function Pageloadtime() {
+function pageLoadTime() {
     var aftr_loadtime = new Date().getTime();  
     pgloadtime = (aftr_loadtime - before_loadtime) / 1000;
     document.getElementById("loadtime").innerHTML = "Page load time is <font color='red'><b>" + pgloadtime + "</b></font> Seconds";  
 }  
 
-// console.log(document.getElementById('history-page'));
+function lightsUpNavigation() {
+    console.log(document.location.pathname.slice(1));
 
-// console.log(document.location);
-if (document.location.pathname == "/") {
-    console.log("main-page");
-    // document.getElementById("main-page").style.color = "red";
-}
-    // main-page
-    
-if (document.location.pathname == "/HTML/history.html") {
-    console.log("history-page");
+    let nav = document.querySelector("#nav_to_light_up");
+    console.log(nav);
 
-    // document.getElementById('history-page').style.color = "red";
+    for (let i = 0; i < nav.getElementsByClassName("rim-navigation-item").length; i++) {
+        let a = nav.getElementsByClassName("rim-navigation-item")[i];
+        // console.log(a.getAttribute("href"));
+        if (a.getAttribute("href") == document.location.pathname.slice(1)) {
+            a.classList.add("rim-navigation-item_active");
+        }
+    }
 }
+
+window.onload = OnLoadFuncs;
+console.log(" : ) ");

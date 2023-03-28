@@ -16,12 +16,32 @@
         <header class = "welcome-header">
             <h2 class = "welcome-header__title">
                 <a name="top"></a>
-                Конструктор формы
+                Результаты и расписание матчей
             </h2>
             <nav class = "header-navigation">
-                <ul class = "rim-navigation">
+                <h3>Навигация по сайту</h3>
+                <ul id = "nav_to_light_up" class = "rim-navigation">
                     <li>
                         <a href="index.html" class = "rim-navigation-item" id = "main-page">Главная страница</a>
+                        <ul class = "ball-navigation">
+                            <li class = "ball-navigation-item"><a href="index.html#summary">Краткая информация о ресурсе</a></li>
+                            <li class = "ball-navigation-item"><a href="index.html#past-season">Топ-5 NBA прошедшего сезона по очкам</a></li>
+                            <li class = "ball-navigation-item"><a href="index.html#league-table">Турнирная таблица</a></li>
+                            <li class = "ball-navigation-item"><a href="index.html#season-favorites">Фавориты на грядущий сезон</a></li>
+                            <li class = "ball-navigation-item"><a href="index.html#nba-data-api">NBA Data API</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="history.html" class = "rim-navigation-item" id = "history-page">История</a>
+                        <ul class = "ball-navigation">
+                            <li class = "ball-navigation-item"><a href="history.html#origin">Появление</a></li>
+                            <li class = "ball-navigation-item"><a href="history.html#development">Развитие</a></li>
+                            <li class = "ball-navigation-item"><a href="history.html#professional">Профессиональный баскетбол</a></li>
+                            <li class = "ball-navigation-item"><a href="history.html#international">Международный баскетбол</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="create-form.html" class = "rim-navigation-item" id = "form-page">Результаты и расписание матчей</a>
                     </li>
                 </ul>
             </nav>
@@ -34,12 +54,14 @@
                 </p>
                 <form onsubmit="generate_form(this); return false;">
                     <p>
-                        <input type = "number" id = "number-of-games" value="" placeholder="Количество игр"><br>
-                        <input type = "date" id = "date-of-games" value="2023-02-02" min="2022-01-01" max="2023-04-05">
+                        <input type = "number" id = "number-of-games" value="15" placeholder="Количество игр"><br>
+                        <input type = "date" id = "date-of-games" value="2023-02-24" min="2022-01-01" max="2023-04-05"><br>
+                        <input type = "checkbox" id = "scales" name = "scales" checked>
+                        <label for = "scales">Показывать овертайм</label>
                     <p>
                     <input type="submit"></p>
                 </form>
-                <div id = "generated-form">
+                <div class = "tournament-summary" id = "generated-form">
             </article>
         </main>
         <footer class = "footer">
