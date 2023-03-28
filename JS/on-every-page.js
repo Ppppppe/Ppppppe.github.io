@@ -12,7 +12,7 @@ function pageLoadTime() {
 }  
 
 function lightsUpNavigation() {
-    console.log(document.location.pathname.slice(1));
+    console.log(document.location.pathname);
 
     let nav = document.querySelector("#nav_to_light_up");
     console.log(nav);
@@ -20,7 +20,7 @@ function lightsUpNavigation() {
     for (let i = 0; i < nav.getElementsByClassName("rim-navigation-item").length; i++) {
         let a = nav.getElementsByClassName("rim-navigation-item")[i];
         // console.log(a.getAttribute("href"));
-        if (a.getAttribute("href") == document.location.pathname.slice(1)) {
+        if (document.location.pathname.indexOf(a.getAttribute("href")) != -1) {
             a.classList.add("rim-navigation-item_active");
         }
     }
