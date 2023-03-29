@@ -72,7 +72,9 @@ function get_cell_4(text){
     a.classList.add("timetable-guest-score");
     a.classList.add("borderElement");
     a.classList.add("borderElement__orange");
-    a.textContent = text;
+    let b = document.createElement('p');
+    b.textContent = text;
+    a.appendChild(b);
     return a;
 }
 
@@ -103,9 +105,9 @@ function generate(date, num, noConnection, showOvertime) {
             else {
                 for (let i = 0; (i < games.length & (i < num)); i++) {
                     grid_conteiner.appendChild(get_cell_1(games[i].home_team.full_name));
-                    grid_conteiner.appendChild(get_cell_2(games[i].visitor_team.full_name));
                     grid_conteiner.appendChild(get_cell_3(games[i].home_team_score));
                     grid_conteiner.appendChild(get_cell_4(games[i].visitor_team_score));
+                    grid_conteiner.appendChild(get_cell_2(games[i].visitor_team.full_name));
                     if ((games[i].period > 4) && (showOvertime)) {
                         grid_conteiner.appendChild(get_cell_overtime((games[i].period - 4 + "OT")));
                     }
