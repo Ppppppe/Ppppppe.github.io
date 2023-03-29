@@ -50,17 +50,31 @@
             <article class = "main-article">
                 <h3 class = "main-article__title"><a name="origin"></a></h3>
                 <p>
-                    Здесь можно создать таблицу. Указывается длина и ширина (в ячейках)
+                    Здесь можно посмотреть результаты и расписание матчей. Указывается кол-во игр, дата игрового дня, показывать овертайм (если был) 
+                    и отсутствие соединения для тестирования
                 </p>
-                <form onsubmit="generate_form(this); return false;">
+                <div>
+                    <button id = "load-form">Загрузить фильтры</button>
+                    <button id = "save-form">Записать фильтры</button>
+                </div>
+                <form onsubmit="generate_form(); return false;">
                     <p>
-                        <input type = "number" id = "number-of-games" value="15" placeholder="Количество игр"><br>
-                        <input type = "date" id = "date-of-games" value="2023-02-24" min="2022-01-01" max="2023-04-05"><br>
-                        <input type = "checkbox" id = "scales" name = "scales" checked>
-                        <label for = "scales">Показывать овертайм</label>
-                    <p>
-                    <input type="submit"></p>
+                        <input type = "number" id = "number-of-games" value="15" placeholder="Количество игр" name = "numofgames"><br>
+                        <input type = "date" id = "date-of-games" value="2023-02-24" min="2022-01-01" max="2023-04-05" name = "gamedate"><br>
+                        <div>
+                            <input type = "checkbox" id = "show-overtime" name = "showovertime">
+                            <label for = "show-overtime">Показывать овертайм</label>
+                        </div>
+                        <div>
+                            <input type = "checkbox" id = "show-no-connection" name = "shownoconnection">
+                            <label for = "show-no-connection">Нет соединения</label>
+                        </div>
+                        <input type="submit">
+                    </p>
                 </form>
+                <div id = "generated-form-placeholder"></div>
+                <img src = "img/preloader.gif" class = "generated-form-placeholder" id = "preloader">
+                <img src = "img/no-connection.png" class = "generated-form-placeholder" id = "no-connection">
                 <div class = "tournament-summary" id = "generated-form">
             </article>
         </main>

@@ -408,7 +408,6 @@ math {
 
 .history-article-figure{
     /* width: inherit; */
-    clear: both;
     padding: 2px;
     border: 2px solid rgb(67, 67, 218);
     background-color: #41a1e6;
@@ -423,4 +422,10 @@ math {
 .history-article-figure-caption {
     font-style: italic;
     margin-left: 5px;
+}
+
+.generated-form-placeholder {
+    margin: auto;
+    width: 10%;
+    display: none;
 }
