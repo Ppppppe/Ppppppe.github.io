@@ -342,6 +342,11 @@ math {
     border-color: #53392b;
 }
 
+.borderElement__light {
+    background-color: #d0d0d0;
+    border-color: #47919c;
+}
+
 .tournament-summary {
     display: flex;
     flex-direction: column;

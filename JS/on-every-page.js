@@ -26,5 +26,4 @@ function lightsUpNavigation() {
     }
 }
 
-window.onload = OnLoadFuncs;
 console.log(" : ) ");

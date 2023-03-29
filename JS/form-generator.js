@@ -28,9 +28,11 @@ async function get_games(date, isNoConnection){
 
 	if ((response.ok) && (!isNoConnection)) {
         let json = await response.json();
-        console.log(json.data);
+        toastr.success("Расписание успешно загрузилось  :)");
+        // console.log(json.data);
         return json.data;
 	} else {
+        toastr.error("С вашим соединением что-то не так((");
         // alert("Ошибка HTTP: " + response.status);
         noConnection.style.display = "block";
 	}
@@ -38,7 +40,7 @@ async function get_games(date, isNoConnection){
 
 function get_cell_1(text){
     let a = document.createElement('div');
-    a.classList.add("league-table__team-name");
+    a.classList.add("timetable-hometeam");
     a.classList.add("borderElement");
     a.classList.add("borderElement__purple");
     a.classList.add("sports-team-name");
@@ -47,7 +49,7 @@ function get_cell_1(text){
 }
 function get_cell_2(text){
     let a = document.createElement('div');
-    a.classList.add("league-table__total-games-played");
+    a.classList.add("timetable-guest");
     a.classList.add("borderElement");
     a.classList.add("borderElement__purple");
     a.classList.add("sports-team-name");
@@ -56,7 +58,7 @@ function get_cell_2(text){
 }
 function get_cell_3(text){
     let a = document.createElement('div');
-    a.classList.add("league-table__total-wins");
+    a.classList.add("timetable-hometeam-score");
     a.classList.add("borderElement");
     a.classList.add("borderElement__orange");
     let b = document.createElement('p');
@@ -67,9 +69,18 @@ function get_cell_3(text){
 
 function get_cell_4(text){
     let a = document.createElement('div');
-    a.classList.add("league-table__total-losses");
+    a.classList.add("timetable-guest-score");
     a.classList.add("borderElement");
     a.classList.add("borderElement__orange");
+    a.textContent = text;
+    return a;
+}
+
+function get_cell_overtime(text){
+    let a = document.createElement('div');
+    a.classList.add("timetable-overtime");
+    a.classList.add("borderElement");
+    a.classList.add("borderElement__light");
     a.textContent = text;
     return a;
 }
@@ -82,18 +93,23 @@ function generate(date, num, noConnection, showOvertime) {
         games = res;
 
         let grid_conteiner = document.createElement('div');
-        grid_conteiner.classList.add("league-table");
+        grid_conteiner.classList.add("timetable");
         grid_conteiner.classList.add("cell-text");
-
-        if ((games != null) && (games.length == 0)) {
-            grid_conteiner.appendChild(get_cell_1("Игр нет"));
-        }
-        else {
-            for (let i = 0; (i < games.length & (i < num)); i++) {
-                grid_conteiner.appendChild(get_cell_1(games[i].home_team.full_name));
-                grid_conteiner.appendChild(get_cell_2(games[i].visitor_team.full_name));
-                grid_conteiner.appendChild(get_cell_3(games[i].home_team_score));
-                grid_conteiner.appendChild(get_cell_4(games[i].visitor_team_score));
+        console.log(games);
+        if (games != null) {
+            if (games.length == 0) {
+                grid_conteiner.appendChild(get_cell_1("Игр нет"));
+            }
+            else {
+                for (let i = 0; (i < games.length & (i < num)); i++) {
+                    grid_conteiner.appendChild(get_cell_1(games[i].home_team.full_name));
+                    grid_conteiner.appendChild(get_cell_2(games[i].visitor_team.full_name));
+                    grid_conteiner.appendChild(get_cell_3(games[i].home_team_score));
+                    grid_conteiner.appendChild(get_cell_4(games[i].visitor_team_score));
+                    if ((games[i].period > 4) && (showOvertime)) {
+                        grid_conteiner.appendChild(get_cell_overtime((games[i].period - 4 + "OT")));
+                    }
+                }
             }
         }
 
@@ -134,13 +150,3 @@ function saveLocalValues() {
         localStorage.setItem(iterator.id, iterator.type == "checkbox" ? iterator.checked : iterator.value);
     }
 }
-
-function OnLoadFuncs() {
-    const loadForm = document.getElementById("load-form");
-    const saveForm = document.getElementById("save-form");
-    
-    loadForm.addEventListener("click", setLocalValues);
-    saveForm.addEventListener("click", saveLocalValues);
-}
-
-window.onload = OnLoadFuncs;
