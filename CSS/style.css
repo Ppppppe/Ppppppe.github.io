@@ -382,12 +382,45 @@ math {
 
 .history-article-img {
     width:20%;
-    float: left;
     margin-right: 40px;
 }
 
-.history-article-img:hover {
-    transition-duration: 0.7s;
+.history-article-img__rotate:hover {
+    transition: 0.7s;
     transform: rotate(360deg);
 }
 
+.history-article-img__scale {
+    transition: 1s;
+}
+
+.history-article-img__scale:hover {
+    transform: scale(1.2);
+}
+
+.history-article-img__on-left {
+    float: left;
+}
+
+.history-article-img__on-right {
+    float: right;
+}
+
+.history-article-figure{
+    /* width: inherit; */
+    clear: both;
+    padding: 2px;
+    border: 2px solid rgb(67, 67, 218);
+    background-color: #41a1e6;
+    display: flex;
+    flex-direction: column;
+}
+
+.history-article-figure-img {
+    max-width: 100%;
+}
+
+.history-article-figure-caption {
+    font-style: italic;
+    margin-left: 5px;
+}
