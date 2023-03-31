@@ -28,11 +28,11 @@ async function get_games(date, isNoConnection){
 
 	if ((response.ok) && (!isNoConnection)) {
         let json = await response.json();
-        toastr.success("Расписание успешно загрузилось  :)");
+        // toastr.success("Расписание успешно загрузилось  :)");
         // console.log(json.data);
         return json.data;
 	} else {
-        toastr.error("С вашим соединением что-то не так((");
+        // toastr.error("С вашим соединением что-то не так((");
         // alert("Ошибка HTTP: " + response.status);
         noConnection.style.display = "block";
 	}
